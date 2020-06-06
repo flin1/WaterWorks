@@ -6,9 +6,11 @@
     <title>WaterWorks - By Fay Lin</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
   <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/lux/bootstrap.min.css" rel="stylesheet" integrity="sha384-smnSwzHqW1zKbeuSMsAM/fMQpkk7HY11LuHiwT8snL/W2QBoZtVCT4H5x1CEcJCs" crossorigin="anonymous">
+  
   <style>
   .header{
     background-color:#e6eceb;
@@ -21,7 +23,14 @@
     align-items:center;
   }
   body{
-    background-color:#63cdd7;
+    background-color:#e6eceb;
+  }
+  #jumbotron{
+    background-color:#005f89;
+    padding: 100px;
+    display:inline-block;
+    text-align:center;
+    width:100%;
   }
   .circle{
     background: url() 50% no-repeat;
@@ -30,6 +39,23 @@
     width: 150px;
     margin: auto auto 10px;
     border-radius: 50%;
+    display:inline-block;
+  }
+  #educate{
+background: url() 50% no-repeat;
+  }
+  #participate{
+background: url() 50% no-repeat;
+  }
+  #weather{
+background: url() 50% no-repeat;
+  }
+  #title{
+    color: white; 
+ 
+  }
+  #subtitle{
+    color: white; 
   }
 
   </style>
@@ -37,7 +63,7 @@
   <body>
   <div id = "header">
   <nav class="navbar navbar-expand-lg navbar-light header" id = "">
-  <a class="navbar-brand" href="#"><img src = "logo.png" id = "logo"></a>
+  <a class="navbar-brand" href="index.html"><img src = "logo.png" id = "logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -62,8 +88,24 @@
       
     </ul>
   </div>
+  
 </nav>
-<div>
-    <script src="script.js"></script>
+<div id = "jumbotron">
+
+  <h1 id = "title">WaterWorks</h1> 
+  <p id = "subtitle">Spreading awareness about water conservation</p> 
+</div>
+
+
+<div class = "circle" id = "educate"></div>
+<div class = "circle" id = "participate"></div>
+<div class = "circle" id = "weather"></div>
+    <script src="script.js">
+
+$(document).ready(function(){
+  
+});
+
+    </script>
   </body>
 </html>
