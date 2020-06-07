@@ -33,22 +33,23 @@
     width:100%;
   }
   .circle{
-    background: url() 50% no-repeat;
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    margin: auto auto 10px;
+
+    background-size:cover;
+    width:150px;
+    height:150px;
+    margin:30px;
+
     border-radius: 50%;
-    display:inline-block;
+        float: center;
   }
   #educate{
-background: url() 50% no-repeat;
+background: url(book.png) 50% no-repeat;
   }
   #participate{
-background: url() 50% no-repeat;
+background: url(tap.png) 50% no-repeat;
   }
   #weather{
-background: url() 50% no-repeat;
+background: url(cloud.png) 50% no-repeat;
   }
   #title{
     color: white; 
@@ -57,7 +58,16 @@ background: url() 50% no-repeat;
   #subtitle{
     color: white; 
   }
+  .tabs{
+    display:inline-block;
+    float: center;
+    position: relative;
+    width:100%;
+    padding:30px;
+    text-align:center;
 
+  }
+ 
   </style>
   </head>
   <body>
@@ -91,15 +101,18 @@ background: url() 50% no-repeat;
   
 </nav>
 <div id = "jumbotron">
-
   <h1 id = "title">WaterWorks</h1> 
   <p id = "subtitle">Spreading awareness about water conservation</p> 
 </div>
 
-
+<div class= "tabs">
 <div class = "circle" id = "educate"></div>
+<h4><strong>Educate</strong></h4>
 <div class = "circle" id = "participate"></div>
+<h4><strong>Participate</strong></h4>
 <div class = "circle" id = "weather"></div>
+<h4><strong>Weather</strong></h4>
+</div>
     <script src="script.js">
 
 $(document).ready(function(){
