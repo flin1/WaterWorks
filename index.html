@@ -33,14 +33,13 @@
     width:100%;
   }
   .circle{
-
     background-size:cover;
     width:150px;
     height:150px;
-    margin:30px;
-
     border-radius: 50%;
-        float: center;
+ 
+    margin:30px;
+    display: inline-block;
   }
   #educate{
 background: url(book.png) 50% no-repeat;
@@ -59,11 +58,14 @@ background: url(cloud.png) 50% no-repeat;
     color: white; 
   }
   .tabs{
-    display:inline-block;
-    float: center;
-    position: relative;
-    width:100%;
-    padding:30px;
+
+    padding:100px;
+    text-align:center;
+
+
+  }
+  .icons{
+   width:100%;
     text-align:center;
 
   }
@@ -104,14 +106,20 @@ background: url(cloud.png) 50% no-repeat;
   <h1 id = "title">WaterWorks</h1> 
   <p id = "subtitle">Spreading awareness about water conservation</p> 
 </div>
-
+<div class = "icons">
 <div class= "tabs">
 <div class = "circle" id = "educate"></div>
 <h4><strong>Educate</strong></h4>
+<p>Help your community by spreading methods to conserve water usage during natural disasters.</p>
+</div>
+<div class= "tabs">
 <div class = "circle" id = "participate"></div>
 <h4><strong>Participate</strong></h4>
+</div>
+<div class= "tabs">
 <div class = "circle" id = "weather"></div>
 <h4><strong>Weather</strong></h4>
+</div>
 </div>
     <script src="script.js">
 
