@@ -67,7 +67,7 @@ request.onload = function() {
  for(var i = 0; i < list.properties.periods.length; i++)
 {
     var item = list.properties.periods[i];
-y.innerHTML =  "Date: " + item.name + " Temperature: " +item.temperature + " "+item.temperatureUnit + " Forecast: " + item.detailedForecast;
+y.innerHTML =  "Date: " + item.name + "<br>Temperature: " +item.temperature + " "+item.temperatureUnit + "<br>Forecast: " + item.detailedForecast;
 
     
 }
