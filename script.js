@@ -1,5 +1,6 @@
 
 var x = document.getElementById("demo");
+var y = document.getElementById("forecast");
 var lat;
 var long;
 function getLocation() {
@@ -20,6 +21,7 @@ long = position.coords.longitude;
 
 }
 var latitude, longitude;
+var forecast;
 $(document).ready(function(){
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(handle_geolocation_query,handle_errors);
@@ -52,17 +54,36 @@ function onPositionReady() {
     var data = JSON.parse(this.response)
 
   if (xhttp.status >= 200 && xhttp.status < 400) {
-    var forecast =  data.properties.forecast;
+     forecast = (data.properties.forecast);
       console.log(data.properties.forecast);
-  
+    var request = new XMLHttpRequest();
+console.log(forecast);
+request.open('GET', forecast, true);
+request.onload = function() {
+  // Begin accessing JSON data here
+  var list = JSON.parse(this.response)
+
+  if (request.status >= 200 && request.status < 400) {
+ for(var i = 0; i < list.properties.periods.length; i++)
+{
+    var item = list.properties.periods[i];
+y.innerHTML =  "Date: " + item.name + " Temperature: " +item.temperature + " "+item.temperatureUnit + " Forecast: " + item.detailedForecast;
+
+    
+}
+            
+  } else {
+    console.log('error')
+  }
+}
+
+request.send()
   } else {
     console.log('error')
   }
 }
   xhttp.send();
 
-}
-function parseForecast(){
-  
+
 }
      
